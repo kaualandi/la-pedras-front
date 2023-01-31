@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { NgxMaskModule } from 'ngx-mask';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { IconComponent } from './components/shared/Icons/icons-svg.component';
@@ -24,12 +26,20 @@ import { PaginationComponent } from './components/shared/pagination/pagination.c
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxMaskDirective,
-    NgxMaskPipe,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    NgxMaskModule.forRoot()
   ],
-  providers: [provideNgxMask()],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'pt'
+    },
+    {
+      provide:  DEFAULT_CURRENCY_CODE,
+      useValue: 'BRL'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
