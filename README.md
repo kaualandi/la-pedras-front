@@ -1,27 +1,75 @@
 # WebBoilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.10.
 
-## Development server
+## Servidor de dev
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+ng serve
+```
+E abra o navegador em [localhost:4200](http://localhost:4200). A aplicação irá recarregar automaticamente caso haja alguma alteração no código.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para gerar uma build de produção.
+```bash
+npm run build:prod
+```
+Ou para gerar uma build de desenvolvimento.
+```bash
+npm run build
+```
+Os arquivos serão gerados na pasta `dist/`.
 
-## Running unit tests
+## Gerando componentes
+```bash
+ng generate component component-name
+```
+Para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Libs instaladas
+- Angular Material
+  - `ng add @angular/material`
+- ngx-mask
+  - `npm i ngx-mask`
 
-## Running end-to-end tests
+## Links úteis
+### Pacotes instalados
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [ngx-mask](https://github.com/JsDaddy/ngx-mask)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Outros
+- [Charts](https://apexcharts.com/docs/angular-charts/)
+- [Carrosel/Slides](https://swiperjs.com/angular)
+- [Captcha](https://github.com/leNicDev/ng-hcaptcha#readme)
+- [Scroll animado (ngx-scrollreveal)](https://tinesoft.github.io/ngx-scrollreveal/doc/index.html)
+- [Scroll animado (AOS)](https://michalsnik.github.io/aos/)
+- [Icones](https://fw2svg.kaualf.com/)
 
-## Further help
+## Componentes compartilhados
+Icones
+```html
+<icon [name]="menu"></icon>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Loading
+```html
+<loading></loading>
+```
+
+Loading da página
+```html
+<page-loading></page-loading>
+```
+Paginação de tabela
+```html
+<pagination (pageChange) [back] [next] [current] [total]></pagination>
+```
+
+
+## Estrutura dos diretórios
+Gere um arquivo de texto com a estrutura de diretórios 
+```bash
+npm run tree
+```

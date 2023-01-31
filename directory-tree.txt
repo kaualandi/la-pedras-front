@@ -36,7 +36,6 @@
 |  ├── main.ts
 |  ├── polyfills.ts
 |  ├── styles
-|  |  ├── _buttons.scss
 |  |  ├── _media.scss
 |  |  ├── _transitions.scss
 |  |  └── _variables.scss
@@ -46,8 +45,6 @@
 ├── tsconfig.json
 └── tsconfig.spec.json
 
-directory: 3885 file: 42561
+directory: 3764 file: 42583
 
-ignored: directory (85)
-
-> tree -l 100 --ignore node_modules --ignore .angular -o directory-tree.txt
+ignored: directory (212)
