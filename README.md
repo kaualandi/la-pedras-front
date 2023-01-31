@@ -2,6 +2,11 @@
 
 Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.10.
 
+## Clonando para um novo projeto
+```bash
+git clone https://bitbucket.org/noclaftech/boilerplate-web-angular <nome-do-projeto>
+```
+
 ## Servidor de dev
 
 ```bash
