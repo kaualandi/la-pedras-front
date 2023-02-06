@@ -1,12 +1,14 @@
-import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import { DatePipe, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMaskModule } from 'ngx-mask';
 import { AppRoutingModule } from './app-routing.module';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
+registerLocaleData(localePt);
 
 import { AppComponent } from './app.component';
 import { IconComponent } from './components/shared/Icons/icons-svg.component';
@@ -31,14 +33,13 @@ import { PaginationComponent } from './components/shared/pagination/pagination.c
     NgxMaskModule.forRoot()
   ],
   providers: [
+    DatePipe,
+    { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
+    { provide: LOCALE_ID, useValue: "pt" },
     {
-      provide: LOCALE_ID,
-      useValue: 'pt'
-    },
-    {
-      provide:  DEFAULT_CURRENCY_CODE,
+      provide: DEFAULT_CURRENCY_CODE,
       useValue: 'BRL'
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })
