@@ -5,8 +5,8 @@
   gap: 10px;
   width: max-content;
   .arrow {
-    color: var(--text-color-20);
-    @include transition;
+    color: var(--text-color);
+    transition: var(--ts);
     cursor: auto;
     &.active {
       opacity: 1;
