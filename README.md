@@ -72,6 +72,28 @@ Paginação de tabela
 <pagination (pageChange) [back] [next] [current] [total]></pagination>
 ```
 
+## Estilização
+Para criar novos estilos globais, como por exemplo, para botões, formulários, modais, etc, é preciso criar o arquivo `.scss` na pasta `src/styles`, por exemplo, `src/styles/_buttons.scss`. Após isso importe-o no arquivo `src/styles.scss` como: `@import 'styles/buttons';`. Não se esqueça do `_` no início do nome do arquivo.
+
+As variáveis de estilização estão no arquivo `src/styles/_variables.scss`.
+
+### Media screens
+Para criar media screens use
+```scss
+@include media('<=tablet') { // > | < | <= | >=
+  // Estilos aqui
+}
+```
+Caso queira adicionar novos breakpoints use o arquivo `src/styles/_media.scss`.
+
+Para mais informações, acesse a documentação do [Include Media](https://eduardoboucas.github.io/include-media).
+
+## PWA
+### Logos
+Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as dimensões e substitua com as logos corretas que estão em `src/assets/icons`.
+
+### Variáveis
+As variáveis `name`, `short_name`, `theme_color` e `background_color` devem ser configuradas no arquivo `manifest.webmanifest`.
 
 ## Estrutura dos diretórios
 Gere um arquivo de texto com a estrutura de diretórios 
