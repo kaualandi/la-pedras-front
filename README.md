@@ -96,7 +96,7 @@ Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as di
 As variáveis `name`, `short_name`, `theme_color` e `background_color` devem ser configuradas no arquivo `manifest.webmanifest`.
 
 ## Lint
-Utilize este comando para rodar a verificacao de sintaxe em todo o projeto.
+Utilize este comando para executar a verificação de sintaxe em todo o projeto.
 ```bash
 ng lint
 ```
@@ -106,11 +106,17 @@ ng lint
 - Nomes de funções para funções de callback, usar o prefixo `on`. Exemplo: `onTaskDeleted()`
 - Nomes de funções para funções de validação, usar o prefixo `validate`. Exemplo: `validateTask()`
 - Descritivas, porém não muito extensas.
+- Utilizar camelCase
 
 ### Variáveis
 - Todas as variáveis devem ser escritas em inglês.
 - Descritivas, porém não muito extensas.
 - Tipar sempre que possível.
+- Utilizar snake_case.
+
+### Interfaces
+- Precede o `I` antes da nomenclatura que segue o padrão PascalCase.
+- Utilizar pasta de models para o armazenamento das mesmas.
 
 ## Commits
 
