@@ -96,7 +96,7 @@ Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as di
 As variáveis `name`, `short_name`, `theme_color` e `background_color` devem ser configuradas no arquivo `manifest.webmanifest`.
 
 ## Lint
-Para rodar o test de lint
+Utilize este comando para rodar a verificacao de sintaxe em todo o projeto.
 ```bash
 ng lint
 ```
