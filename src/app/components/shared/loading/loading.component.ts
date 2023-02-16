@@ -1,14 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'loading',
-  templateUrl: './loading.component.html'
+  templateUrl: './loading.component.html',
 })
-export class LoadingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class LoadingComponent {}

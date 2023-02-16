@@ -1,21 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-pagination',
+  selector: 'pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
 })
-export class PaginationComponent implements OnInit {
-  @Input() back: boolean = false;
-  @Input() next: boolean = false;
-  @Input() current: number = 1;
-  @Input() total: number = 1;
+export class PaginationComponent {
+  @Input() back = false;
+  @Input() next = false;
+  @Input() current = 1;
+  @Input() total = 1;
   @Output() pageChange = new EventEmitter<number>();
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   handlePageChange(page: number) {
     this.pageChange.emit(page);

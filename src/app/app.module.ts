@@ -1,6 +1,11 @@
 import { DatePipe, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { DEFAULT_CURRENCY_CODE, isDevMode, LOCALE_ID, NgModule } from '@angular/core';
+import {
+  DEFAULT_CURRENCY_CODE,
+  isDevMode,
+  LOCALE_ID,
+  NgModule,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -9,13 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgxMaskModule } from 'ngx-mask';
 import { AppRoutingModule } from './app-routing.module';
-registerLocaleData(localePt);
 
 import { AppComponent } from './app.component';
 import { IconComponent } from './components/shared/Icons/icons-svg.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -36,18 +41,18 @@ import { PaginationComponent } from './components/shared/pagination/pagination.c
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [
     DatePipe,
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
-    { provide: LOCALE_ID, useValue: "pt" },
+    { provide: LOCALE_ID, useValue: 'pt' },
     {
       provide: DEFAULT_CURRENCY_CODE,
-      useValue: 'BRL'
+      useValue: 'BRL',
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
