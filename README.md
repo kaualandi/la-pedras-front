@@ -112,7 +112,7 @@ ng lint
 - Todas as variáveis devem ser escritas em inglês.
 - Descritivas, porém não muito extensas.
 - Tipar sempre que possível.
-- Utilizar snake_case.
+- Utilizar camelCase.
 
 ### Interfaces
 - Precede o `I` antes da nomenclatura que segue o padrão PascalCase.
