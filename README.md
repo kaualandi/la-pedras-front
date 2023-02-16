@@ -95,6 +95,42 @@ Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as di
 ### Variáveis
 As variáveis `name`, `short_name`, `theme_color` e `background_color` devem ser configuradas no arquivo `manifest.webmanifest`.
 
+## Lint
+Para rodar o test de lint
+```bash
+ng lint
+```
+
+### Funções
+- Nomes de funções para ouvintes de eventos, usar o prefixo `handle`. Exemplo: `handleDeleteTask()`
+- Nomes de funções para funções de callback, usar o prefixo `on`. Exemplo: `onTaskDeleted()`
+- Nomes de funções para funções de validação, usar o prefixo `validate`. Exemplo: `validateTask()`
+- Descritivas, porém não muito extensas.
+
+### Variáveis
+- Todas as variáveis devem ser escritas em inglês.
+- Descritivas, porém não muito extensas.
+- Tipar sempre que possível.
+
+## Commits
+> Preferencialmente feitos em inglês.
+- **chore:** Atualização de tarefas que não ocasionam alteração no código de produção, mas mudanças de ferramentas, mudanças de configuração e bibliotecas.
+feat: São adições de novas funcionalidades ou de quaisquer outras novas implantações ao código.
+- **fix:** Essencialmente definem o tratamento de correções de bugs.
+- **refactor:** Utilizado em quaisquer mudanças que sejam executados no código, porém não alterem a funcionalidade final da tarefa impactada.
+- **docs:** Inclusão ou alteração somente de arquivos de documentação.
+- **perf:** Uma alteração de código que melhora o desempenho.
+- **style:** Alterações referentes a arquivos de estilo como SCSS ou CSS.
+- **build:** Alterações que afetam o sistema de construção ou dependências externas (escopos de exemplo: gulp, broccoli, npm).
+- **ci:** Mudanças em nossos arquivos e scripts de configuração de CI (exemplo de escopos: Travis, Circle, BrowserStack, SauceLabs).
+- **env:** Utilizado na descrição de modificações ou adições em arquivos de configuração em processos e métodos de integração contínua (CI), como parâmetros em arquivos de configuração de containers.
+### Exemplos de Commits:
+- chore: add commitlint and husky
+- chore(eslint): require semicolon
+- refactor: typed variables
+ -feat: add axios / search and check data
+- feat(page/home): created route for home page
+
 ## Estrutura dos diretórios
 Gere um arquivo de texto com a estrutura de diretórios 
 ```bash
