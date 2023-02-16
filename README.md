@@ -55,7 +55,7 @@ Para gerar um novo componente. Você também pode usar `ng generate directive|pi
 ## Componentes compartilhados
 Icones
 ```html
-<icon [name]="menu"></icon>
+<icon [name]="'menu'"></icon>
 ```
 
 Loading
