@@ -118,6 +118,11 @@ ng lint
 - Precede o `I` antes da nomenclatura que segue o padrão PascalCase.
 - Utilizar pasta de models para o armazenamento das mesmas.
 
+### HTML
+- Os campos de formulário com mais de uma tag `<input>` devem conter uma tag `<form>` como pai e nele conter um evento `(ngSubmit)` e um `type='submit'` no botão ao invés de um `(keyup.enter)`.
+- Usar form-control ao invés de ngModel.
+- Todas as tags `<input>` que possuirem um respectivo `<label>`, utilizar um `id` no input que tenha o mesmo valor que o `for` do label.
+
 ## Commits
 
 > Preferencialmente feitos em inglês.
