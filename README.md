@@ -53,11 +53,6 @@ Para gerar um novo componente. Você também pode usar `ng generate directive|pi
 - [Icones](https://fw2svg.kaualf.com/)
 
 ## Componentes compartilhados
-Icones
-```html
-<icon [name]="'menu'"></icon>
-```
-
 Loading
 ```html
 <loading></loading>
@@ -99,6 +94,12 @@ Diretivas são utilizadas para criar componentes reutilizáveis.
 
 ```html
 <input type="file" name="logo" appInputFile (upload)="handleInputChange($event)" />
+```
+
+### Icones
+
+```html
+<i icon="icon-name"></i>
 ```
 
 ## PWA

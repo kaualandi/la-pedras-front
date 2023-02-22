@@ -13,11 +13,10 @@ import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { IconComponent } from './components/shared/Icons/icons-svg.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
-import { PaginationComponent } from './components/shared/pagination/pagination.component';
 import { InputFileDirective } from './directives/input-file.directive';
+import { IconDirective } from './directives/icon.directive';
 
 registerLocaleData(localePt);
 
@@ -26,9 +25,8 @@ registerLocaleData(localePt);
     AppComponent,
     LoadingComponent,
     PageLoadingComponent,
-    IconComponent,
-    PaginationComponent,
     InputFileDirective,
+    IconDirective,
   ],
   imports: [
     BrowserModule,
