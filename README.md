@@ -88,6 +88,23 @@ Caso queira adicionar novos breakpoints use o arquivo `src/styles/_media.scss`.
 
 Para mais informações, acesse a documentação do [Include Media](https://eduardoboucas.github.io/include-media).
 
+## Diretivas
+
+Diretivas são utilizadas para criar componentes reutilizáveis.
+
+### Input mask
+```html
+<input type="text" name="phone" mask="(00) 00000-0000" />
+```
+
+### Input file
+
+> O evento do `(upload)` retorna o base64 do arquivo selecionado, quando se trata de uma imagem, ela já é compressada com o service `compressor`.
+
+```html
+<input type="file" name="logo" appInputFile (upload)="handleInputChange($event)" />
+```
+
 ## PWA
 ### Logos
 Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as dimensões e substitua com as logos corretas que estão em `src/assets/icons`.
