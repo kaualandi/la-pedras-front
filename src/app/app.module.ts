@@ -1,9 +1,6 @@
 import { DatePipe, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import {
-  DEFAULT_CURRENCY_CODE, LOCALE_ID,
-  NgModule
-} from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -19,6 +16,8 @@ import { IconComponent } from './components/shared/Icons/icons-svg.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
+import { InputFileDirective } from './directives/input-file.directive';
+
 registerLocaleData(localePt);
 
 @NgModule({
@@ -28,6 +27,7 @@ registerLocaleData(localePt);
     PageLoadingComponent,
     IconComponent,
     PaginationComponent,
+    InputFileDirective,
   ],
   imports: [
     BrowserModule,
