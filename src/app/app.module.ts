@@ -1,6 +1,8 @@
 import { DatePipe, registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -15,8 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
-import { InputFileDirective } from './directives/input-file.directive';
 import { IconDirective } from './directives/icon.directive';
+import { InputFileDirective } from './directives/input-file.directive';
 
 registerLocaleData(localePt);
 
@@ -34,7 +36,10 @@ registerLocaleData(localePt);
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    HttpClientModule,
     MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
