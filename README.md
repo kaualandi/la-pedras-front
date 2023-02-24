@@ -37,6 +37,10 @@ Para gerar um novo componente. Você também pode usar `ng generate directive|pi
   - `ng add @angular/material`
 - ngx-mask
   - `npm i ngx-mask`
+- md5-typescript
+  - `npm i md5-typescript`
+- ngx-cookie-service
+  - `npm i ngx-cookie-service`
 
 ## Links úteis
 ### Pacotes instalados
