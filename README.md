@@ -106,6 +106,46 @@ Diretivas são utilizadas para criar componentes reutilizáveis.
 <i icon="icon-name"></i>
 ```
 
+## Serviços
+### Custom validators
+
+> Validadores customizados para o formControl do Angular. Existem atualmente validadores para CPF e CNPJ.
+
+```ts
+constructor(private customValidators: CustomValidatorsService) {}
+
+cpfInput = new FormControl('', [
+  Validators.required,
+  this.customValidators.cpf(),
+]);
+```
+
+### Snackbar
+
+> Serviço para exibir mensagens na tela.
+
+```ts
+constructor(private snackbar: SnackbarService) {}
+
+this.snackbar.success('Mensagem');
+this.snackbar.error('Mensagem');
+this.snackbar.info('Mensagem');
+```
+
+### Storage
+
+> Serviço para armazenar dados e evitar requisições desnecessárias.
+
+Já possui uma função para salvar o token de acesso no cookie e um `get` para obter o mesmo.
+
+```ts
+constructor(private storage: StorageService) {}
+
+token = this.storage.token;
+this.storage.setToken('token', keepLogged);
+```
+
+
 ## PWA
 ### Logos
 Adicionar as logos corretamente coforme o `manifest.webmanifest`. Respeite as dimensões e substitua com as logos corretas que estão em `src/assets/icons`.
