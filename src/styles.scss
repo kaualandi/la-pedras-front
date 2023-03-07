@@ -28,6 +28,12 @@ $web-boilerplate-theme: mat.define-light-theme(
 @import 'styles/media';
 @import 'styles/typography';
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
