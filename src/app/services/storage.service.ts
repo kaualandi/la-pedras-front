@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StorageService {
-  constructor(private cookieService: CookieService) {}
+  constructor(private cookieService: CookieService, private router: Router) {}
 
   get token() {
     return this.cookieService.get('token');
@@ -27,5 +28,10 @@ export class StorageService {
       true,
       'Strict'
     );
+  }
+
+  logout() {
+    this.cookieService.delete('token');
+    this.router.navigate(['/login']);
   }
 }
