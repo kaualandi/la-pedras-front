@@ -105,6 +105,11 @@ Diretivas são utilizadas para criar componentes reutilizáveis.
 ```html
 <i icon="icon-name"></i>
 ```
+### Pagination
+
+```html
+<pagination (pageChange) [back] [next] [current] [total]></pagination>
+```
 
 ## Serviços
 ### Custom validators

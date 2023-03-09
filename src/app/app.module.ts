@@ -19,6 +19,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
 import { IconDirective } from './directives/icon.directive';
 import { InputFileDirective } from './directives/input-file.directive';
+import { PaginationComponent } from './components/shared/pagination/pagination.component';
 
 registerLocaleData(localePt);
 
@@ -29,6 +30,7 @@ registerLocaleData(localePt);
     PageLoadingComponent,
     InputFileDirective,
     IconDirective,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
