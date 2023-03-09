@@ -67,6 +67,13 @@ Loading da página
 <page-loading></page-loading>
 ```
 
+Paginação de tabela
+```html
+<pagination (pageChange) [back] [next] [current] [total]></pagination>
+```
+
+
+
 ## Estilização
 Para criar novos estilos globais, como por exemplo, para botões, formulários, modais, etc, é preciso criar o arquivo `.scss` na pasta `src/styles`, por exemplo, `src/styles/_buttons.scss`. Após isso importe-o no arquivo `src/styles.scss` como: `@import 'styles/buttons';`. Não se esqueça do `_` no início do nome do arquivo.
 
@@ -105,12 +112,6 @@ Diretivas são utilizadas para criar componentes reutilizáveis.
 ```html
 <i icon="icon-name"></i>
 ```
-### Pagination
-
-```html
-<pagination (pageChange) [back] [next] [current] [total]></pagination>
-```
-
 ## Serviços
 ### Custom validators
 

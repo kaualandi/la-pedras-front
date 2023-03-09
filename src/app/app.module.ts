@@ -20,6 +20,7 @@ import { PageLoadingComponent } from './components/shared/page-loading/page-load
 import { IconDirective } from './directives/icon.directive';
 import { InputFileDirective } from './directives/input-file.directive';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 registerLocaleData(localePt);
 
@@ -31,6 +32,7 @@ registerLocaleData(localePt);
     InputFileDirective,
     IconDirective,
     PaginationComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
