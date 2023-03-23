@@ -13,12 +13,18 @@ export class StorageService {
   UserSubject = new Subject<void>();
   myUser: IUser = {} as IUser;
 
+  userTheme: 'light' | 'dark' = 'light';
+
   get myself() {
     return this.myUser;
   }
 
   set myself(user: IUser) {
     this.myUser = user;
+  }
+
+  get theme() {
+    return this.userTheme;
   }
 
   watchUser() {
@@ -54,5 +60,43 @@ export class StorageService {
   logout() {
     this.cookieService.delete('token');
     this.router.navigate(['/login']);
+  }
+
+  toggleUserTheme() {
+    if (this.userTheme === 'light') {
+      this.setTheme('dark');
+    } else {
+      this.setTheme('light');
+    }
+  }
+
+  loadCurrentTheme() {
+    const inLocal = localStorage.getItem('theme') as 'light' | 'dark';
+    if (inLocal) {
+      this.userTheme = inLocal;
+      this.setTheme(inLocal);
+      return inLocal;
+    }
+
+    const deviceMode = window.matchMedia('(prefers-color-scheme: dark)');
+    if (deviceMode.matches) {
+      this.userTheme = 'dark';
+      this.setTheme('dark');
+      return 'dark';
+    }
+    this.setTheme('light');
+    return 'light';
+  }
+
+  setTheme(theme: 'light' | 'dark') {
+    this.userTheme = theme;
+    localStorage.setItem('theme', theme);
+    const html = document.querySelector('html');
+
+    if (theme === 'light') {
+      html?.classList.remove('dark');
+    } else {
+      html?.classList.toggle('dark');
+    }
   }
 }
