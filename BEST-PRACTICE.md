@@ -136,7 +136,7 @@ Uma grande vantagem que vejo dos formulários reativos é a possibilidade de man
 
 Então **NÃO USE NGMODEL**.
 
-Você pode ver mais sobre e seus usos nesses artigos: [Step by step guide to creating Reactive forms in Angular](https://medium.com/@gawadnikita/step-by-step-guide-to-creating-reactive-forms-in-angular-ea5031ba3b3b), [Angular Reactive Forms: A Complete Guide](https://netbasal.com/angular-reactive-forms-a-complete-guide-4b6c7f9b4d8a) e [Angular Reactive Forms: A Complete Guide](https://netbasal.com/angular-reactive-forms-a-complete-guide-4b6c7f9b4d8a).
+Você pode ver mais sobre e seus usos nesses artigos: [Guia passo a passo para a criação de formulários reativos no Angular](https://medium.com/@gawadnikita/step-by-step-guide-to-creating-reactive-forms-in-angular-ea5031ba3b3b), [Introdução a formulários reativos no Angular](https://medium.com/@agoiabeladeyemi/gentle-introduction-to-reactive-forms-in-angular-c3cb01b90037) e [Angular FormArray: Guia completo](https://blog.angular-university.io/angular-form-array/).
 
 ```typescript
 constructor(private fb : FormBuilder ){}
