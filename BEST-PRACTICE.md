@@ -149,7 +149,7 @@ this.form = this.fb.group({
 ```
 
 ```html
-<form [formGroup]="myGroup">
+<form [formGroup]="form">
   <input type="text" formControlName="name" />
   <input type="email" formControlName="email" />
   <input type="password" formControlName="password" />
