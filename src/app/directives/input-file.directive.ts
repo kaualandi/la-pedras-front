@@ -3,7 +3,7 @@ import { EMPTY, expand, map } from 'rxjs';
 import { CompressorService } from '../services/compressor.service';
 
 @Directive({
-  selector: '[appInputFile]',
+  selector: '[inputFile]',
 })
 export class InputFileDirective {
   @Output() upload = new EventEmitter<string>();

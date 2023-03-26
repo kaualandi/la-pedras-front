@@ -1,3 +1,4 @@
+import { InputNumberDirective } from './directives/input-number.directive';
 import { DatePipe, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
@@ -33,6 +34,7 @@ registerLocaleData(localePt);
     IconDirective,
     PaginationComponent,
     NavbarComponent,
+    InputNumberDirective,
   ],
   imports: [
     BrowserModule,
