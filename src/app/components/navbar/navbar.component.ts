@@ -1,12 +1,12 @@
 import { StorageService } from './../../services/storage.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
   constructor(private storage: StorageService) {}
 
   loading = false;
@@ -19,6 +19,10 @@ export class NavbarComponent implements OnInit {
         this.getMe();
       },
     });
+  }
+
+  ngOnDestroy(): void {
+    this.storage.unwatchUser();
   }
 
   getMe() {

@@ -31,6 +31,10 @@ export class StorageService {
     return this.UserSubject.asObservable();
   }
 
+  unwatchUser() {
+    this.UserSubject.unsubscribe();
+  }
+
   changeUser(): void {
     this.UserSubject.next();
   }
