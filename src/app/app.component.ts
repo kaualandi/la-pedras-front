@@ -1,5 +1,5 @@
-import { StorageService } from './services/storage.service';
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private storage: StorageService) {}
+  constructor(private theme: ThemeService) {}
 
   ngOnInit() {
-    this.storage.loadCurrentTheme();
+    this.theme.loadCurrentTheme();
   }
 }
