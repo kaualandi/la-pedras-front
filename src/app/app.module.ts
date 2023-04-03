@@ -1,4 +1,3 @@
-import { InputNumberDirective } from './directives/input-number.directive';
 import { DatePipe, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
@@ -14,14 +13,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgxMaskModule } from 'ngx-mask';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { InputNumberDirective } from './directives/input-number.directive';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
+import { PaginationComponent } from './components/shared/pagination/pagination.component';
 import { IconDirective } from './directives/icon.directive';
 import { InputFileDirective } from './directives/input-file.directive';
-import { PaginationComponent } from './components/shared/pagination/pagination.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
 
 registerLocaleData(localePt);
 
@@ -35,6 +36,7 @@ registerLocaleData(localePt);
     PaginationComponent,
     NavbarComponent,
     InputNumberDirective,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
