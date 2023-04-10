@@ -9,7 +9,8 @@
     "watch": "ng lint && ng build --watch --configuration development",
     "test": "ng test",
     "tree": "tree -l 100 --ignore node_modules --ignore .angular --ignore dist -o directory-tree.txt",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "clear": "rm -rf node_modules && rm package-lock.json && rm -rf .angular && npm install"
   },
   "private": true,
   "dependencies": {

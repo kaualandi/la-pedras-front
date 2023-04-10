@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
+@import 'styles/bootstrap/bootstrap-grid.scss';
 @import 'styles/animations';
 @import 'styles/input';
 @import 'styles/media';
