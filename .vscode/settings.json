@@ -16,6 +16,5 @@
   "editor.tabSize": 2,
   "git.enableSmartCommit": true,
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
-  "window.zoomLevel": 0,
   "eslint.validate": ["javascript", "typescript"]
 }
