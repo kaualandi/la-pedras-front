@@ -1,0 +1,118 @@
+@import 'src/styles/media';
+
+nav {
+  width: 100%;
+  padding: var(--navbar_top_padding);
+  .content {
+    max-width: var(--navbar_max_width);
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<=navbar-collapse') {
+      // flex: 1;
+      flex-wrap: wrap;
+      // width: 100%;
+    }
+
+    .logo {
+      grid-area: logo;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--navbar_top_color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.2rem !important;
+
+      img {
+        width: var(--navbar_logo_width);
+      }
+    }
+
+    .menu {
+      transition: all 0.2s;
+      grid-area: menu;
+      overflow: hidden;
+      @include media('<=navbar-collapse') {
+        transition: var(--ts);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        &.hidden {
+          transform: translateY(-200%);
+          z-index: -1;
+        }
+      }
+      a,
+      button {
+        color: var(--navbar_top_color);
+      }
+    }
+  }
+}
+
+.hamburger {
+  grid-area: hamburger;
+  display: none;
+  @include media('<=navbar-collapse') {
+    display: block;
+  }
+  button {
+    background-color: transparent;
+    .line {
+      background-color: var(--navbar_top_color);
+      width: 25px;
+      height: 3px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 7.2px;
+      transition: var(--ts);
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: var(--navbar_top_color);
+        transition: var(--ts);
+      }
+      &::before {
+        transform: translateY(-10px);
+      }
+      &::after {
+        transform: translateY(10px);
+      }
+    }
+  }
+
+  &.active {
+    button {
+      .line {
+        background-color: transparent;
+        transform: rotate(180deg);
+        &::before,
+        &::after {
+          background-color: var(--navbar_top_color);
+          width: 25px;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

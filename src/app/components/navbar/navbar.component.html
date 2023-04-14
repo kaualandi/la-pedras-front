@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<nav>
+  <div class="content">
+
+    <a class="logo" routerLink="/">
+      <img src="assets/images/logo.png" alt="logo">
+      Boilerplate
+    </a>
+
+    <div class="hamburger" [ngClass]="{ active: !navbarHidden }">
+      <button aria-label="menu" mat-icon-button (click)="navbarHidden = !navbarHidden">
+        <span class="line"></span>
+      </button>
+    </div>
+
+    <div class="menu" [ngClass]="{ hidden: navbarHidden }">
+      <a mat-button routerLink="/">Início</a>
+      <a mat-button routerLink="/about">Sobre</a>
+      <a mat-button routerLink="/contact">Contato</a>
+    </div>
+  </div>
+</nav>
