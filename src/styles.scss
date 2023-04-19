@@ -5,6 +5,7 @@
 @import 'styles/animations';
 @import 'styles/input';
 @import 'styles/media';
+@import 'styles/scroll';
 @import 'styles/transitions';
 @import 'styles/typography';
 @import 'styles/variables';
@@ -27,6 +28,10 @@ body {
 .cdk-global-overlay-wrapper,
 .cdk-overlay-container {
   z-index: 10000000 !important;
+}
+
+.mat-checkbox-frame {
+  background-color: var(--main_color) !important;
 }
 
 .svg-inline--fa {

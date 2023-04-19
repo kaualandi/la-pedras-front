@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -48,6 +49,7 @@ registerLocaleData(localePt);
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
+    MatCheckboxModule,
     NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
