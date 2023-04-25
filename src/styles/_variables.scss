@@ -1,9 +1,12 @@
 :root {
   font-size: calc(15px + 0.390625vw);
   --ts: all 0.3s ease-in-out;
-  --text_color: #000000;
-  --main_color: #302b2b;
-
+  --title_color: #07180d;
+  --text_color: #161616;
+  --primary_color: #113e21;
+  --secondary_color: #b38b59;
+  --primary_bg: #fefefe;
+  --secondary_bg: #f0f0f0;
   --yellow_color: #f2af4c;
   --green_color: #5dc983;
   --red_color: #eb5769;
@@ -11,8 +14,7 @@
   // ? Navbar variables
   --navbar_max_width: 1024px;
   --navbar_logo_width: 50px;
-  // --navbar_top_bg: #fff0; // transparent
-  --navbar_top_bg: #ccc; // transparent
+  --navbar_top_bg: #fff0; // transparent
   --navbar_top_color: #000000;
   --navbar_top_padding: 20px 10px;
   --navbar_scroll_bg: #fff;
