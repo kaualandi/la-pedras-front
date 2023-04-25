@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/web-boilerplate'),
+      dir: require('path').join(__dirname, './coverage/la-pedras'),
       subdir: '.',
       reporters: [
         { type: 'html' },
