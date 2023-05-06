@@ -29,6 +29,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './components/home/products/products.component';
 import { ProductComponent } from './components/shared/product/product.component';
 import { FeaturesComponent } from './components/home/features/features.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 registerLocaleData(localePt);
 
@@ -47,6 +48,7 @@ registerLocaleData(localePt);
     ProductsComponent,
     ProductComponent,
     FeaturesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
