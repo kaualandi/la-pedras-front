@@ -17,7 +17,7 @@ export class ProductsComponent {
     },
     {
       id: 2,
-      url: 'https://picsum.photos/400/400',
+      url: 'https://picsum.photos/500/500',
       product_id: 2,
       created_at: '2021-08-10T18:00:00.00Z',
       updated_at: '2021-08-10T18:00:00.00Z',
