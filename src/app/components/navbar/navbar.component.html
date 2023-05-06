@@ -1,21 +1,32 @@
+<div class="tape">
+  <p>Sinônimo de <strong>qualidade</strong> e <strong>confiabilidade</strong>.</p>
+  <i icon="check"></i>
+</div>
+
 <nav>
   <div class="content">
 
     <a class="logo" routerLink="/">
-      <img src="assets/images/logo.png" alt="logo">
-      Boilerplate
+      <img src="assets/images/logo.svg" alt="logo">
     </a>
 
-    <div class="hamburger" [ngClass]="{ active: !navbarHidden }">
-      <button aria-label="menu" mat-icon-button (click)="navbarHidden = !navbarHidden">
-        <span class="line"></span>
+    <div class="search card_input" [ngClass]="{active: showSearch}">
+      <input type="text" placeholder="O que está buscando?">
+      <button aria-label="Buscar" mat-icon-button>
+        <i icon="search"></i>
       </button>
     </div>
 
-    <div class="menu" [ngClass]="{ hidden: navbarHidden }">
-      <a mat-button routerLink="/">Início</a>
-      <a mat-button routerLink="/about">Sobre</a>
-      <a mat-button routerLink="/contact">Contato</a>
+    <div class="menu">
+      <button class="search_button" (click)="showSearch = !showSearch" aria-label="Buscar" mat-icon-button>
+        <i icon="search"></i>
+      </button>
+      <button aria-label="Carrinho" mat-icon-button>
+        <i icon="cart"></i>
+        <span class="dot">2</span>
+      </button>
     </div>
   </div>
 </nav>
+
+<router-outlet></router-outlet>

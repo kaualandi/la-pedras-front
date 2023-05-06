@@ -1,8 +1,31 @@
 @import 'src/styles/media';
 
+.tape {
+  background-color: var(--primary_color);
+  display: flex;
+  gap: 5px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary_bg);
+  box-shadow: var(--bs);
+  p {
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    margin: 0;
+    strong {
+      font-weight: 600;
+    }
+  }
+  i {
+    font-size: 1rem;
+  }
+}
+
 nav {
   width: 100%;
   padding: var(--navbar_top_padding);
+  background-color: var(--navbar_top_bg);
   .content {
     max-width: var(--navbar_max_width);
     margin: 0 auto;
@@ -11,12 +34,6 @@ nav {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-
-    @include media('<=navbar-collapse') {
-      // flex: 1;
-      flex-wrap: wrap;
-      // width: 100%;
-    }
 
     .logo {
       grid-area: logo;
@@ -30,87 +47,86 @@ nav {
 
       img {
         width: var(--navbar_logo_width);
+        @include media('<=tablet') {
+          width: var(--navbar_logo_width_tablet);
+        }
+      }
+    }
+
+    .search {
+      width: 50%;
+      max-width: 815px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      @include media('<=navbar-collapse') {
+        position: fixed;
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10%;
+        opacity: 0;
+        z-index: -1;
+        transition: var(--ts);
+        &.active {
+          opacity: 1;
+          z-index: 3;
+          width: 80%;
+          top: 144px;
+        }
+      }
+
+      input {
+        border-radius: var(--br) 0 0 var(--br);
+        width: 100%;
+      }
+      button {
+        width: 80px;
+        height: 45px;
+        box-shadow: var(--bs);
+        background-color: var(--primary_color);
+        border-radius: 0 var(--br) var(--br) 0;
+        i {
+          font-size: 1.2rem;
+          color: var(--primary_bg);
+        }
       }
     }
 
     .menu {
       transition: all 0.2s;
-      grid-area: menu;
-      overflow: hidden;
-      @include media('<=navbar-collapse') {
-        transition: var(--ts);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-basis: 100%;
-        flex-grow: 1;
-        flex-wrap: wrap;
-        &.hidden {
-          transform: translateY(-200%);
-          z-index: -1;
-        }
-      }
-      a,
-      button {
-        color: var(--navbar_top_color);
-      }
-    }
-  }
-}
-
-.hamburger {
-  grid-area: hamburger;
-  display: none;
-  @include media('<=navbar-collapse') {
-    display: block;
-  }
-  button {
-    background-color: transparent;
-    .line {
-      background-color: var(--navbar_top_color);
-      width: 25px;
-      height: 3px;
-      border-radius: 5px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: 7.2px;
-      transition: var(--ts);
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 3px;
-        border-radius: 10px;
-        background-color: var(--navbar_top_color);
-        transition: var(--ts);
-      }
-      &::before {
-        transform: translateY(-10px);
-      }
-      &::after {
-        transform: translateY(10px);
-      }
-    }
-  }
 
-  &.active {
-    button {
-      .line {
+      a,
+      button {
         background-color: transparent;
-        transform: rotate(180deg);
-        &::before,
-        &::after {
-          background-color: var(--navbar_top_color);
-          width: 25px;
+        position: relative;
+        i {
+          color: var(--navbar_top_color);
+          font-size: 1.2rem;
         }
-        &::before {
-          transform: rotate(45deg);
+        .dot {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: var(--primary_color);
+          color: var(--primary_bg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.6rem !important;
         }
-        &::after {
-          transform: rotate(-45deg);
+      }
+      .search_button {
+        display: none;
+        @include media('<=navbar-collapse') {
+          display: block;
         }
       }
     }
