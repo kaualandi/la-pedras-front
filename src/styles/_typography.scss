@@ -22,6 +22,10 @@
   font-size: 1.5rem !important;
 }
 
+.f-32 {
+  font-size: 2rem !important;
+}
+
 h1 {
   @extend .f-24;
 }
@@ -58,4 +62,13 @@ label {
 
 .mat-button {
   @extend .f-14;
+}
+
+.line-limit {
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
 }

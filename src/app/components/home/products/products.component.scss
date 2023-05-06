@@ -1,0 +1,22 @@
+#products {
+  padding: 85px 0;
+  background-color: var(--secondary_bg);
+  .container {
+    header {
+      color: var(--title_color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      h2 {
+        margin: 0;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .row {
+      list-style-type: none;
+    }
+  }
+}

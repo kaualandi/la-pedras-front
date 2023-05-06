@@ -1,0 +1,28 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+.swiper {
+  background-color: var(--secondary_bg);
+  margin-top: 20px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .swiper-pagination-horizontal {
+    opacity: 0;
+    .swiper-pagination-bullet {
+      box-shadow: var(--bs);
+      transition: var(--ts);
+      &.swiper-pagination-bullet-active {
+        background-color: var(--primary_bg);
+        width: 16px;
+        border-radius: 8px;
+      }
+    }
+  }
+  &:hover {
+    .swiper-pagination-horizontal {
+      opacity: 1;
+    }
+  }
+}

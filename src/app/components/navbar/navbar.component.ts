@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   loading = false;
 
-  showSearch = true;
+  showSearch = false;
 
   ngOnInit(): void {
     this.getMe();

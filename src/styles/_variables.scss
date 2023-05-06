@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(15px + 0.390625vw);
+  font-size: calc(15px + 0.350625vw);
   --bs: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --ts: all 0.3s ease-in-out;
   --br: 15px;
@@ -7,6 +7,7 @@
   --text_color: #161616;
   --primary_color: #113e21;
   --secondary_color: #b38b59;
+  --third_color: #2b2a2a;
   --primary_bg: #fefefe;
   --secondary_bg: #f0f0f0;
   --yellow_color: #f2af4c;
@@ -17,7 +18,7 @@
   --navbar_max_width: 1440px;
   --navbar_logo_width: 70px;
   --navbar_logo_width_tablet: 50px;
-  --navbar_top_bg: #fefefe; // transparent
+  --navbar_top_bg: #fefefe;
   --navbar_top_color: #000000;
   --navbar_top_padding: 20px 40px;
   --navbar_scroll_bg: #fff;

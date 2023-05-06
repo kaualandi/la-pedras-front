@@ -1,0 +1,17 @@
+<section id="products">
+  <div class="container">
+    <header>
+      <h2 class="f-32">
+        Grande variedades de produtos
+        <i icon="check"></i>
+      </h2>
+      <a routerLink="/products" mat-button>Ver todos</a>
+    </header>
+
+    <ul class="row">
+      <li class="col-12 col-sm-6 col-lg-3" *ngFor="let product of products; let i = index">
+        <app-product [product]="product" [idx]="i"></app-product>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -3,6 +3,7 @@
 
 @import 'styles/bootstrap/bootstrap-grid.scss';
 @import 'styles/animations';
+@import 'styles/button';
 @import 'styles/input';
 @import 'styles/media';
 @import 'styles/scroll';
@@ -23,6 +24,10 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+img {
+  width: 100%;
 }
 
 .cdk-global-overlay-wrapper,

@@ -9,6 +9,7 @@
   justify-content: center;
   color: var(--primary_bg);
   box-shadow: var(--bs);
+  position: relative;
   p {
     font-size: 0.8rem !important;
     text-transform: uppercase;
@@ -36,15 +37,6 @@ nav {
     justify-content: space-between;
 
     .logo {
-      grid-area: logo;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      color: var(--navbar_top_color);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.2rem !important;
-
       img {
         width: var(--navbar_logo_width);
         @include media('<=tablet') {
@@ -77,7 +69,6 @@ nav {
           top: 144px;
         }
       }
-
       input {
         border-radius: var(--br) 0 0 var(--br);
         width: 100%;
@@ -96,10 +87,8 @@ nav {
     }
 
     .menu {
-      transition: all 0.2s;
       display: flex;
       align-items: center;
-
       a,
       button {
         background-color: transparent;
@@ -112,8 +101,8 @@ nav {
           position: absolute;
           top: -5px;
           right: -5px;
-          width: 20px;
-          height: 20px;
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
           background-color: var(--primary_color);
           color: var(--primary_bg);
@@ -129,6 +118,31 @@ nav {
           display: block;
         }
       }
+    }
+  }
+}
+
+.pages {
+  background-color: var(--third_color);
+  box-shadow: var(--bs);
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+  }
+  a {
+    padding: 10px 20px;
+    color: var(--primary_bg);
+    border-radius: var(--br);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--ts);
+    display: block;
+    text-decoration: none;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
