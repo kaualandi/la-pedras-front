@@ -39,11 +39,22 @@ nav {
     justify-content: space-between;
 
     .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      gap: 5px;
       img {
         width: var(--navbar_logo_width);
         @include media('<=tablet') {
           width: var(--navbar_logo_width_tablet);
         }
+      }
+      span {
+        color: var(--navbar_top_color);
+        @extend .f-ibm;
+        line-height: 1.2;
+        font-weight: 600;
       }
     }
 
