@@ -1,0 +1,110 @@
+@import 'src/styles/media';
+
+footer {
+  padding: 60px 0;
+  background-color: var(--third_bg);
+  .container {
+    .content {
+      @include media('<=phone') {
+        gap: 30px;
+      }
+      .links {
+        margin-top: 40px;
+        .row {
+          p,
+          li {
+            text-transform: uppercase;
+          }
+          p {
+            color: var(--footer_primary);
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+              margin-bottom: 5px;
+              a {
+                color: var(--primary_bg);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        @include media('<=phone') {
+          margin-top: 0px;
+          text-align: center;
+          .row {
+            gap: 20px;
+          }
+        }
+      }
+
+      .brand_col {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include media('<=phone') {
+          align-items: center;
+        }
+        .brand {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          .logo {
+            width: 130px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            img {
+              width: 100%;
+            }
+            span {
+              text-transform: uppercase;
+              color: var(--primary_bg);
+            }
+          }
+          .social {
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              li {
+                margin-bottom: 5px;
+                a {
+                  text-decoration: none;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  color: var(--primary_bg);
+                  i {
+                    color: var(--footer_primary);
+                    font-size: 1.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tape-copy {
+  background-color: #000;
+  color: var(--primary_bg);
+  padding: 10px 0;
+  p {
+    margin: 0;
+    text-align: center;
+    a {
+      color: var(--primary_bg);
+    }
+  }
+}
