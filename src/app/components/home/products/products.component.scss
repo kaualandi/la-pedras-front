@@ -1,3 +1,4 @@
+@import 'src/styles/typography';
 @import 'src/styles/media';
 
 #products {
@@ -11,6 +12,7 @@
       justify-content: space-between;
       margin-bottom: 50px;
       h2 {
+        @extend .f-inter;
         margin: 0;
         i {
           font-size: 1.5rem;

@@ -1,3 +1,4 @@
+@import 'src/styles/typography';
 @import 'src/styles/media';
 
 #features {
@@ -47,6 +48,9 @@
           font-size: 7rem;
           color: var(--primary_color);
         }
+        p {
+          @extend .f-lexend;
+        }
         .title {
           color: var(--primary_bg);
           text-transform: uppercase;
@@ -54,6 +58,7 @@
         }
         .description {
           color: var(--secondary_bg);
+          font-weight: 300;
         }
         &.ruler {
           i {

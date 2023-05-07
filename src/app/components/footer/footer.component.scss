@@ -1,3 +1,4 @@
+@import 'src/styles/typography';
 @import 'src/styles/media';
 
 footer {
@@ -12,8 +13,9 @@ footer {
         margin-top: 40px;
         .row {
           p,
-          li {
+          a {
             text-transform: uppercase;
+            @extend .f-kanit;
           }
           p {
             color: var(--footer_primary);
@@ -44,7 +46,7 @@ footer {
 
       .brand_col {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: column;
         @include media('<=phone') {
           align-items: center;
@@ -55,7 +57,7 @@ footer {
           justify-content: center;
           flex-direction: column;
           .logo {
-            width: 130px;
+            width: 140px;
             margin-bottom: 30px;
             display: flex;
             align-items: center;
@@ -67,6 +69,8 @@ footer {
             span {
               text-transform: uppercase;
               color: var(--primary_bg);
+              @extend .f-lexend;
+              @extend .f-8;
             }
           }
           .social {
@@ -82,6 +86,8 @@ footer {
                   align-items: center;
                   gap: 10px;
                   color: var(--primary_bg);
+                  @extend .f-lexend;
+                  @extend .f-12;
                   i {
                     color: var(--footer_primary);
                     font-size: 1.5rem;
@@ -103,7 +109,9 @@ footer {
   p {
     margin: 0;
     text-align: center;
+    @extend .f-inter;
     a {
+      @extend .f-inter;
       color: var(--primary_bg);
     }
   }

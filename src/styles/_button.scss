@@ -1,9 +1,12 @@
+@import 'src/styles/typography';
+
 .mat-button-base {
   background-color: var(--primary_color);
   text-transform: uppercase;
   font-weight: 500;
   box-shadow: var(--bs);
   .mat-button-wrapper {
+    @extend .f-inter;
     color: var(--primary_bg);
   }
   &.mat-button {

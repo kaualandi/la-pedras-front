@@ -1,3 +1,5 @@
+@import 'src/styles/typography';
+
 .card {
   margin: 50px auto 0;
   border-radius: 24px;
@@ -54,6 +56,9 @@
     transform: translateY(-31px);
     padding: 12px;
     text-align: center;
+    p {
+      @extend .f-kanit;
+    }
     .title {
       color: var(--primary_bg);
       font-weight: 500;
