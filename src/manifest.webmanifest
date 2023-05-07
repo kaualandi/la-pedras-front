@@ -1,7 +1,7 @@
 {
-  "name": "la-pedras",
-  "short_name": "web-bp",
-  "theme_color": "#1976d2",
+  "name": "AL - Design de Pedras",
+  "short_name": "AL - DP",
+  "theme_color": "#113e21",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
