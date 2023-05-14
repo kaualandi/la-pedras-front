@@ -1,7 +1,8 @@
 <div routerLink="/product/{{product.id}}" class="card" [ngClass]="{ odd }">
   <div class="carousel">
-    <img [src]="product.images[0].url" alt="Imagem do produto">
-    <img [src]="product.images[1].url" alt="Imagem do produto">
+    <img *ngIf="product.images[0]" [src]="product.images[0].url" alt="Imagem do produto">
+    <img *ngIf="product.images[1]" [src]="product.images[1].url" alt="Imagem do produto">
+    <img *ngIf="!product.images[1]" src="assets/images/logo.svg" alt="Imagem do produto">
   </div>
   <div class="detail">
     <p class="title line-limit f-18">{{ product.name }}</p>

@@ -1,9 +1,9 @@
 export interface IImage {
   id: number;
   url: string;
+  created_at: Date;
+  updated_at: Date;
   product_id: number;
-  created_at: string;
-  updated_at: string;
 }
 
 export interface IProduct {
@@ -11,8 +11,9 @@ export interface IProduct {
   name: string;
   description: string;
   images: IImage[];
-  price: number;
   category_id: number;
-  created_at: string;
-  updated_at: string;
+  measure_id: number;
+  price: number;
+  created_at: Date;
+  updated_at: Date;
 }
