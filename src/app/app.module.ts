@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,18 +19,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { InputNumberDirective } from './directives/input-number.directive';
 
 import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FeaturesComponent } from './components/home/features/features.component';
 import { HeroComponent } from './components/home/hero/hero.component';
+import { ProductsComponent } from './components/home/products/products.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { PageLoadingComponent } from './components/shared/page-loading/page-loading.component';
 import { PaginationComponent } from './components/shared/pagination/pagination.component';
+import { ProductComponent } from './components/shared/product/product.component';
 import { IconDirective } from './directives/icon.directive';
 import { InputFileDirective } from './directives/input-file.directive';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductsComponent } from './components/home/products/products.component';
-import { ProductComponent } from './components/shared/product/product.component';
-import { FeaturesComponent } from './components/home/features/features.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 registerLocaleData(localePt);
 
@@ -49,6 +51,7 @@ registerLocaleData(localePt);
     ProductComponent,
     FeaturesComponent,
     FooterComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ registerLocaleData(localePt);
     ReactiveFormsModule,
     MatCheckboxModule,
     SwiperModule,
+    MatDialogModule,
     NgxMaskModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

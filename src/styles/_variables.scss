@@ -1,6 +1,7 @@
 :root {
   font-size: calc(15px + 0.350625vw);
   --bs: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --time_c_b: cubic-bezier(0.25, 0.4, 0.55, 1.4);
   --ts: all 0.3s ease-in-out;
   --br: 15px;
   --footer_primary: #ff8c00;
@@ -15,6 +16,13 @@
   --yellow_color: #f2af4c;
   --green_color: #5dc983;
   --red_color: #eb5769;
+
+  --bg_linear: linear-gradient(
+    135deg,
+    rgba(255, 140, 0, 0.1) 0%,
+    rgba(207, 165, 114, 0.1) 16%,
+    rgba(17, 62, 33, 0.1) 100%
+  );
 
   // ? Navbar variables
   --navbar_max_width: 1440px;

@@ -12,4 +12,8 @@ export class ProductsService {
   getProducts() {
     return this.http.get<IProduct[]>(`${environment.base_url}/products`);
   }
+
+  getProduct(id: string) {
+    return this.http.get<IProduct>(`${environment.base_url}/products/${id}`);
+  }
 }

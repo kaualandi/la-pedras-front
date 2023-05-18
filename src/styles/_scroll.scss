@@ -6,11 +6,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main_color);
+  background: var(--primary_color);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--text_color);
+  background: var(--primary_bg);
   border-radius: 6px;
 }

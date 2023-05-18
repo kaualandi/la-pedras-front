@@ -1,0 +1,29 @@
+<main id="product-detail">
+  <page-loading *ngIf="loading"></page-loading>
+  <div class="container" *ngIf="!loading">
+    <div class="row">
+      <div class="col-12 col-md-5">
+        <div class="product-image">
+          <div class="image-zoom">
+            <img [src]="product.images[selectedImage].url" alt="{{product.name}}">
+          </div>
+          <div class="images-list">
+            <div class="image-item" *ngFor="let image of product.images; let i = index"
+              [ngClass]="{ active: i === selectedImage }" (mouseover)="selectedImage = i">
+              <img [src]="image.url" alt="{{product.name}}">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <div class="product-detail">
+          <h1>{{ product.name }}</h1>
+          <p>
+            {{ product.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

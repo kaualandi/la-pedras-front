@@ -2,6 +2,19 @@
   --fa-animation-duration: 0.5s;
 }
 
+@mixin reveal() {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: reveal 0.3s var(--time_c_b) forwards;
+
+  @keyframes reveal {
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
 @mixin move_left_to_right() {
   animation: move_left_to_right 1s var(--time_c_b);
 
