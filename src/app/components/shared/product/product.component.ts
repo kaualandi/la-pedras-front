@@ -11,8 +11,10 @@ export class ProductComponent implements OnInit {
   @Input() idx = 1;
 
   odd = false;
+  delay = '0s';
 
   ngOnInit(): void {
     this.odd = !(this.idx % 2);
+    this.delay = `${this.idx * 0.1}s`;
   }
 }

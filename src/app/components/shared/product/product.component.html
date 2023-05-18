@@ -1,4 +1,4 @@
-<div routerLink="/product/{{product.id}}" class="card" [ngClass]="{ odd }">
+<div routerLink="/product/{{product.id}}" class="card" [ngClass]="{ odd }" [ngStyle]="{ '--delay': delay }">
   <div class="carousel">
     <img *ngIf="product.images[0]" [src]="product.images[0].url" alt="Imagem do produto">
     <img *ngIf="product.images[1]" [src]="product.images[1].url" alt="Imagem do produto">

@@ -8,7 +8,9 @@
       <a routerLink="/products" mat-button>Ver todos</a>
     </header>
 
-    <ul class="row">
+    <page-loading *ngIf="loading"></page-loading>
+
+    <ul class="row" *ngIf="!loading">
       <li class="col-12 col-sm-6 col-lg-3" *ngFor="let product of products; let i = index">
         <app-product [product]="product" [idx]="i"></app-product>
       </li>
